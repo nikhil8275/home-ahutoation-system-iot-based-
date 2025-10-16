@@ -1,0 +1,118 @@
+:root {
+  --glass-bg: rgba(255, 255, 255, .08);
+  --glass-br: 20px;
+  --accent-blue: #3a6ea5;
+  --dark-blue: #0f2027;
+  --text-light: #fff;
+  --text-muted: rgba(255, 255, 255, .85);
+}
+
+body {
+  background: radial-gradient(1200px 600px at 20% -10%, #3a6ea5 0%, rgba(189, 66, 66, 0) 60%),
+              radial-gradient(1200px 600px at 110% 10%, #152a40 0%, rgba(29, 1, 1, 0) 60%),
+              linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  color: var(--text-light);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--glass-br);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  padding: 16px;
+}
+
+.header-title {
+  letter-spacing: .5px;
+  font-weight: 700;
+}
+
+.profile-chip {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px; border-radius: 999px; background: rgba(255, 255, 255, .10);
+}
+
+.logout-btn {
+  border: 0; border-radius: 999px; padding: 8px 14px; font-weight: 600;
+  background: #ff4d4f; color: #fff; cursor: pointer;
+}
+
+.weather-icon { width: 70px; }
+
+.device-card {
+  text-align: center; transition: .2s transform;
+}
+.device-card:hover { transform: translateY(-2px); }
+
+.device-icon { font-size: 2rem; margin-bottom: 8px; }
+
+.form-switch .form-check-input { width: 3.1rem; height: 1.6rem; cursor: pointer; }
+
+.notifications { max-height: 160px; overflow: auto; font-size: .92rem; }
+
+.muted { opacity: .85; }
+
+/* Styles for Login/Register Forms */
+.auth-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px !important;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,.2);
+    background-color: rgba(0,0,0,.2);
+    border-radius: 10px;
+    color: var(--text-light);
+    box-sizing: border-box;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    border:0;
+    border-radius: 10px;
+    background: var(--accent-blue);
+    color: var(--text-light);
+    font-weight: 600;
+    cursor:pointer;
+}
+
+.form-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.form-link a {
+    color: #87b2d6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 575.98px) {
+  .header-title { font-size: 1.15rem; }
+  .profile-chip span { display: none; }
+}
